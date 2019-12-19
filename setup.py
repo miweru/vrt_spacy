@@ -9,13 +9,13 @@ with open("README.md", "r") as fh:
 
 setup(
     name='vrt_spacy',
-    version='0.0.1',
+    version='0.0.2',
     packages=['vrt_spacy'],
     url='https://github.com/miweru/vrt_spacy',
     license='GPL-3.0',
     author='Michael Ruppert',
     author_email='michael.ruppert@fau.de',
-    description='creating vrt corpora',
+    description='creating vrt corpora with spacy',
     long_description=long_description,
     long_description_content_type='text/markdown',
     install_requires=[

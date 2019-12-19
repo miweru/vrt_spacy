@@ -37,7 +37,7 @@ class Annotate:
         assert isinstance(text, str)
 
         with Text(self._corpus, **kwargs) as _:
-            for sentence in self._nlp(text).sents:
+            for sentence in self._nlp(text.replace("\n", " ")).sents:
                 with S(self._corpus) as s:
                     for word in sentence:
                         s.writep(word.text, *[getattr(word, attr) for attr in self._add_patrs])

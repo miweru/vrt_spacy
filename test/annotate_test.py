@@ -16,6 +16,7 @@ class MyTestCase(unittest.TestCase):
         with Corpus("~", "meinkorpus", 4, "text_name") as c:
             annotate = Annotate(c)
             annotate("Das hier ist mein Text", text_name="Text1")
+            annotate("Das hier ist ein Ähm, linebreak Text.\n" * 10, text_name="Text3")
             annotate("Das hier ist ein weiterer, ziemlich langer Text! ;) " * 30, text_name="Text2")
 
         mypath = Path("~/meinkorpus.vrt.gz").expanduser().resolve()

@@ -1,6 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2019 Michael Ruppert <michael.ruppert@fau.de>
 import unittest
 from pathlib import Path
 
+from smart_open import open as so
 from vrt import Corpus
 
 from vrt_spacy import Annotate
@@ -15,7 +20,7 @@ class MyTestCase(unittest.TestCase):
 
         mypath = Path("~/meinkorpus.vrt.gz").expanduser().resolve()
         self.assertTrue(mypath.exists())
-        text = [line.strip() for line in open(mypath)]
+        text = [line.strip() for line in so(mypath)]
         self.assertIn("<", text[0])
         self.assertIn("<", text[-1])
         self.assertGreater(len(text), 200)

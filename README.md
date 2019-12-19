@@ -13,7 +13,7 @@ Usage Example:
 from vrt import Corpus, S, Text
 from vrt_spacy import Annotate
 with Corpus("~","meinkorpus",4,"text_name") as c:
-    annotate = Annotate(c)
+    annotate = Annotate(c, spacymodel="de_core_news_md")
     annotate("Das hier ist mein Text", text_name="Text1")
     with Text(c, text_name="Text2") as t:
         with S(c) as s:

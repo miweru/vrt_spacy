@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2019 Michael Ruppert <michael.ruppert@fau.de>
 from setuptools import setup
 
 with open("README.md", "r") as fh:
@@ -16,7 +20,7 @@ setup(
     install_requires=[
         "smart_open>=1.9.0",
         "spacy>=2.2.3",
-        "vrt-generator>=0.0.5"
+        "vrt-generator>=0.0.6"
     ],
     python_requires=">=3.5",
     classifiers=[

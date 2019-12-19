@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2019 Michael Ruppert <michael.ruppert@fau.de>
 import warnings
 
 import spacy
@@ -32,7 +36,7 @@ class Annotate:
         """
         assert isinstance(text, str)
 
-        with Text(self._corpus, **kwargs) as t:
+        with Text(self._corpus, **kwargs) as _:
             for sentence in self._nlp(text).sents:
                 with S(self._corpus) as s:
                     for word in sentence:
